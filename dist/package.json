@@ -1,0 +1,6 @@
+{
+  "name": "gbreeze/winjs",
+  "version": "dev",
+  "registry": "github",
+  "main": "js/ui.js"
+}
