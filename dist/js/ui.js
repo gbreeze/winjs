@@ -12,7 +12,7 @@
             // amd
             define(["./base"], factory);
         } else {
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.4.27 ui.js,StartTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.6.16 ui.js,StartTM');
             if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
                 // CommonJS
                 factory(require("./base"));
@@ -20,7 +20,7 @@
                 // No module system
                 factory(globalObject.WinJS);
             }
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.4.27 ui.js,StopTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.6.16 ui.js,StopTM');
         }
     }(function (WinJS) {
 
@@ -48906,7 +48906,8 @@ define('WinJS/Controls/AutoSuggestBox',[
                         this._element.classList.remove(ClassNames.asbInputFocus);
                         this._hideFlyout();
                     }
-                    this.queryText = this._prevQueryText; // Finalize IME composition
+                    // todo, set via property
+                    //  this.queryText = this._prevQueryText; // Finalize IME composition
                     this._isProcessingDownKey = false;
                     this._isProcessingUpKey = false;
                     this._isProcessingTabKey = false;
