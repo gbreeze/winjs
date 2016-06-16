@@ -789,7 +789,8 @@ define([
                         this._element.classList.remove(ClassNames.asbInputFocus);
                         this._hideFlyout();
                     }
-                    this.queryText = this._prevQueryText; // Finalize IME composition
+                    // todo, set via property
+                    //  this.queryText = this._prevQueryText; // Finalize IME composition
                     this._isProcessingDownKey = false;
                     this._isProcessingUpKey = false;
                     this._isProcessingTabKey = false;
