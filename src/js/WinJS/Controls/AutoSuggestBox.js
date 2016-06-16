@@ -948,7 +948,7 @@ define([
                                 this.queryText = this._prevQueryText;
                                 setSelection(-1);
                             } else if (this.queryText !== "") {
-                                this.queryText = "";
+                                this.queryText = this._prevQueryText;
                                 this._inputOrImeChangeHandler(null);
                                 event.preventDefault();
                                 event.stopPropagation();
