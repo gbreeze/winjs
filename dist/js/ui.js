@@ -12,7 +12,7 @@
             // amd
             define(["./base"], factory);
         } else {
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.6.16 ui.js,StartTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.6.17 ui.js,StartTM');
             if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
                 // CommonJS
                 factory(require("./base"));
@@ -20,7 +20,7 @@
                 // No module system
                 factory(globalObject.WinJS);
             }
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.6.16 ui.js,StopTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.6.17 ui.js,StopTM');
         }
     }(function (WinJS) {
 
@@ -48435,7 +48435,7 @@ define('WinJS/Controls/AutoSuggestBox',[
                     // Input element
                     this._inputElement = _Global.document.createElement("input");
                     this._inputElement.autocorrect = "off";
-                    this._inputElement.type = "search";
+                    this._inputElement.type = "text";
                     this._inputElement.classList.add(ClassNames.asbInput);
                     this._inputElement.classList.add("win-textbox");
                     this._inputElement.setAttribute("role", "textbox");
@@ -49065,7 +49065,7 @@ define('WinJS/Controls/AutoSuggestBox',[
                                 this.queryText = this._prevQueryText;
                                 setSelection(-1);
                             } else if (this.queryText !== "") {
-                                this.queryText = "";
+                                this.queryText = this._prevQueryText;
                                 this._inputOrImeChangeHandler(null);
                                 event.preventDefault();
                                 event.stopPropagation();
