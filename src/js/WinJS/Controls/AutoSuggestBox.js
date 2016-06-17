@@ -318,7 +318,7 @@ define([
                     // Input element
                     this._inputElement = _Global.document.createElement("input");
                     this._inputElement.autocorrect = "off";
-                    this._inputElement.type = "search";
+                    this._inputElement.type = "text";
                     this._inputElement.classList.add(ClassNames.asbInput);
                     this._inputElement.classList.add("win-textbox");
                     this._inputElement.setAttribute("role", "textbox");
