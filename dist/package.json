@@ -1,6 +1,6 @@
 {
   "name": "winjs",
   "version": "dev",
-  "registry": "github",
+  "registry": "jspm",
   "main": "js/ui.js"
 }
