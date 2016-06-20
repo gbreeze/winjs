@@ -318,7 +318,7 @@ define([
                     // Input element
                     this._inputElement = _Global.document.createElement("input");
                     this._inputElement.autocorrect = "off";
-                    this._inputElement.type = "search";
+                    this._inputElement.type = "text";
                     this._inputElement.classList.add(ClassNames.asbInput);
                     this._inputElement.classList.add("win-textbox");
                     this._inputElement.setAttribute("role", "textbox");
@@ -789,7 +789,8 @@ define([
                         this._element.classList.remove(ClassNames.asbInputFocus);
                         this._hideFlyout();
                     }
-                    this.queryText = this._prevQueryText; // Finalize IME composition
+                    // todo, set via property
+                    //  this.queryText = this._prevQueryText; // Finalize IME composition
                     this._isProcessingDownKey = false;
                     this._isProcessingUpKey = false;
                     this._isProcessingTabKey = false;
@@ -947,7 +948,7 @@ define([
                                 this.queryText = this._prevQueryText;
                                 setSelection(-1);
                             } else if (this.queryText !== "") {
-                                this.queryText = "";
+                                this.queryText = this._prevQueryText;
                                 this._inputOrImeChangeHandler(null);
                                 event.preventDefault();
                                 event.stopPropagation();
