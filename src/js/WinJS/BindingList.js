@@ -334,6 +334,17 @@ define([
                     /// </signature>
                     return this._getArray().filter(callback, thisArg);
                 },
+                find: function (callback, thisArg) {
+                    /// <signature helpKeyword="WinJS.Binding.ListBase.filter">
+                    /// <summary locid="WinJS.Binding.ListBase.filter">
+                    /// Returns the elements of a list that meet the condition specified in a callback function.
+                    /// </summary>
+                    /// <param name="callback" type="Function" locid="WinJS.Binding.ListBase.filter_p:callback">A function that accepts up to three arguments. The function is called for each element in the list.</param>
+                    /// <param name="thisArg" type="Object" optional="true" locid="WinJS.Binding.ListBase.filter_p:thisArg">An object to which the this keyword can refer in the callback function. If thisArg is omitted, undefined is used.</param>
+                    /// <returns type="Array" locid="WinJS.Binding.ListBase.filter_returnValue">An array containing the elements that meet the condition specified in the callback function.</returns>
+                    /// </signature>
+                    return this._getArray().find(callback, thisArg);
+                },
                 forEach: function (callback, thisArg) {
                     /// <signature helpKeyword="WinJS.Binding.ListBase.forEach">
                     /// <summary locid="WinJS.Binding.ListBase.forEach">
