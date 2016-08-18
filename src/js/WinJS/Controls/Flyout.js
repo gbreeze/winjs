@@ -245,7 +245,7 @@ define([
                 this._dismissableLayer = new _LightDismissableLayer(function _CascadeManager_onLightDismiss(info) {
                     if (info.reason === _LightDismissService.LightDismissalReasons.escape) {
                         that.collapseFlyout(that.getAt(that.length - 1));
-                    } else {
+                    } else if (info.reason != "lostFocus") {
                         that.collapseAll();
                     }
                 });
