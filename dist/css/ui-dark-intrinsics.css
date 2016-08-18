@@ -287,7 +287,7 @@ textarea,
 button,
 select,
 option {
-  font-family: "Segoe UI", sans-serif, "Segoe MDL2 Assets", "Symbols";
+  font-family: "Segoe UI", sans-serif, "Segoe MDL2 Assets", "Symbols", "Segoe UI Emoji";
 }
 input:not([type]),
 input[type=""],

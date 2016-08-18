@@ -1,6 +1,6 @@
 {
   "name": "winjs",
-  "version": "dev",
+  "version": "4.4.1",
   "registry": "jspm",
   "main": "js/ui.js"
 }
