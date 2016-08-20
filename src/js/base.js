@@ -8,16 +8,16 @@ define([
     'WinJS/Utilities',
     'WinJS/XYFocus',
     'WinJS/Fragments',
-    'WinJS/Application',
-    'WinJS/Navigation',
+    //'WinJS/Application',
+    //'WinJS/Navigation',
     'WinJS/Animations',
     'WinJS/Binding',
     'WinJS/BindingTemplate',
     'WinJS/BindingList',
-    'WinJS/Res',
-    'WinJS/Pages',
-    'WinJS/ControlProcessor',
-    'WinJS/Controls/HtmlControl',
+    //'WinJS/Res',
+    //'WinJS/Pages',
+    //'WinJS/ControlProcessor',
+    //'WinJS/Controls/HtmlControl',
     ], function (_WinJS) {
     "use strict";
 
