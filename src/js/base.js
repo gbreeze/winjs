@@ -8,7 +8,7 @@ define([
     'WinJS/Utilities',
     'WinJS/XYFocus',
     'WinJS/Fragments',
-    //'WinJS/Application',
+    'WinJS/Application',
     //'WinJS/Navigation',
     'WinJS/Animations',
     'WinJS/Binding',

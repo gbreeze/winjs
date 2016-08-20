@@ -12,7 +12,7 @@ define([
     //'WinJS/Controls/TimePicker',
     //'WinJS/Controls/BackButton',
     //'WinJS/Controls/Rating',
-    'WinJS/Controls/ToggleSwitch',
+    //'WinJS/Controls/ToggleSwitch',
     //'WinJS/Controls/SemanticZoom',
     //'WinJS/Controls/Pivot',
     //'WinJS/Controls/Hub',
