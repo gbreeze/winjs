@@ -78,7 +78,9 @@ define([
                         currentPressedHeaderIndex = site.indexForHeaderElement(eventObject.target),
                         mustSetCapture = !isInteractive && currentPressedIndex !== _Constants._INVALID_INDEX;
 
-                    if ((touchInput || leftButton) && this._site.pressedEntity.index === _Constants._INVALID_INDEX && !isInteractive) {
+                    // BUG: Can't invoke items on grouped lists after some scrolling 
+                    // if ((touchInput || leftButton) && this._site.pressedEntity.index === _Constants._INVALID_INDEX && !isInteractive) {
+                    if ((touchInput || leftButton) && !isInteractive) {
                         if (currentPressedHeaderIndex === _Constants._INVALID_INDEX) {
                             this._site.pressedEntity = { type: _UI.ObjectType.item, index: currentPressedIndex };
                         } else {
