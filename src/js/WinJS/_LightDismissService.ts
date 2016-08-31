@@ -598,8 +598,10 @@ class LightDismissService implements ILightDismissService {
         if (activeDismissableNeedsFocus) {
             // If the last input type was keyboard, use focus() so a keyboard focus visual is drawn.
             // Otherwise, use setActive() so no focus visual is drawn.
-            var useSetActive = !_KeyboardBehavior._keyboardSeenLast;
-            this._activeDismissable && this._activeDismissable.onTakeFocus(useSetActive);
+            
+            // BugFix, listVeiw is scrolling to an old item, error exist since jquery-mobile events are used
+            // var useSetActive = !_KeyboardBehavior._keyboardSeenLast;
+            // this._activeDismissable && this._activeDismissable.onTakeFocus(useSetActive);
         }
     }
 
