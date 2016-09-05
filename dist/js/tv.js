@@ -12,7 +12,7 @@
             // amd
             define(["./base","./ui"], factory);
         } else {
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.8.18 tv.js,StartTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.9.5 tv.js,StartTM');
             if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
                 // CommonJS
                 factory(require("./base"),require("./ui"));
@@ -20,7 +20,7 @@
                 // No module system
                 factory(globalObject.WinJS);
             }
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.8.18 tv.js,StopTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.9.5 tv.js,StopTM');
         }
     }(function (WinJS) {
 

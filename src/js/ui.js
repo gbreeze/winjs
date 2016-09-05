@@ -19,7 +19,7 @@ define([
     'WinJS/Controls/Flyout',
     //'WinJS/Controls/_LegacyAppBar',
     'WinJS/Controls/Menu',
-    'WinJS/Controls/SearchBox',
+    //'WinJS/Controls/SearchBox',
     //'WinJS/Controls/SettingsFlyout',
     //'WinJS/Controls/NavBar',
     'WinJS/Controls/Tooltip',
