@@ -40,7 +40,13 @@ define([
                     if ((ch1 === 'o' || ch1 === 'O') && (ch2 === 'n' || ch2 === 'N')) {
                         if (typeof value === "function") {
                             if (control.addEventListener) {
-                                control.addEventListener(key.substr(2), value);
+                                var eventKey = key;
+                                // support mobile phones
+                                // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery
+                                if(!'onclick' in control){
+                                    eventKey = "ontouchstart"
+                                }
+                                control.addEventListener(eventKey.substr(2), value);
                                 continue;
                             }
                         }
