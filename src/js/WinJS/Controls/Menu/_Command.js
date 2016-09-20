@@ -471,7 +471,7 @@ define([
                             MenuCommand._activateFlyoutCommand(this);
                         }
 
-                        if (event && event.type === "click" && this.onclick) {
+                        if (event && (event.type === "click" || event.type === "touchstart") && this.onclick) {
                             this.onclick(event);
                         }
 

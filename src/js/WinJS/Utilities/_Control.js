@@ -3,7 +3,7 @@ define([
     'exports',
     '../Core/_Global',
     '../Core/_Base'
-    ], function controlInit(exports, _Global, _Base) {
+], function controlInit(exports, _Global, _Base) {
     "use strict";
 
     // not supported in WebWorker
@@ -43,8 +43,8 @@ define([
                                 var eventKey = key;
                                 // support mobile phones
                                 // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery
-                                if(!'onclick' in control){
-                                    eventKey = "ontouchstart"
+                                if ('ontouchstart' in document.documentElement) {
+                                    eventKey = "ontouchstart";
                                 }
                                 control.addEventListener(eventKey.substr(2), value);
                                 continue;
