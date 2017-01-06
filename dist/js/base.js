@@ -12,7 +12,7 @@
             // amd
             define([], factory);
         } else {
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.9.5 base.js,StartTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.9.9 base.js,StartTM');
             if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
                 // CommonJS
                 factory();
@@ -20,7 +20,7 @@
                 // No module system
                 factory(globalObject.WinJS);
             }
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.9.5 base.js,StopTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.0.winjs.2016.9.9 base.js,StopTM');
         }
     }(function (WinJS) {
 
@@ -26129,7 +26129,7 @@ define('base',[
     'WinJS/Core',
     'WinJS/Promise',
     'WinJS/_Signal',
-    'WinJS/Scheduler',
+    //'WinJS/Scheduler',
     'WinJS/Utilities',
     'WinJS/XYFocus',
     'WinJS/Fragments',

@@ -4,7 +4,7 @@ define([
     'WinJS/Core',
     'WinJS/Promise',
     'WinJS/_Signal',
-    'WinJS/Scheduler',
+    //'WinJS/Scheduler',
     'WinJS/Utilities',
     'WinJS/XYFocus',
     'WinJS/Fragments',
