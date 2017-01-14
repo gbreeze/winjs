@@ -2048,18 +2048,6 @@ html.win-hoverable .win-itemcontainer.win-selectionstylefilled.win-selected a:ho
     outline: Highlight solid 3px;
   }
 }
-.win-clickeater {
-  background-color: transparent;
-  width: 110%;
-  height: 110%;
-  left: -5%;
-  top: -5%;
-  position: fixed;
-  touch-action: none;
-  outline: 1px solid Purple;
-  /*Necessary to block passthrough over webviews*/
-  -ms-high-contrast-adjust: none;
-}
 /*
 Command buttons.
 */
@@ -3103,169 +3091,17 @@ Settings Pane
     color: WindowText;
   }
 }
-.win-contentdialog {
-  /* Dialog's positioning and sizing rules:
-      - Horizontal alignment
-        - Always horizontally centered
-      - Vertical alignment
-        - If height of window < @dialogVerticallyCenteredThreshold, dialog is attached to top of window
-        - Otherwise, dialog is vertically centered
-      - Width:
-        - Always stays between @minWidth and @maxWidth
-        - Sizes to width of window
-      - Height:
-        - Always stays between @minHeight and @maxHeight
-        - If window height < @maxHeight and dialog height > 50% of window
-          height, dialog height = window height
-        - Otherwise, dialog height sizes to its content
-     */
-  /* Purpose of this element is to control the dialog body's height based on the height
-       of the window. The dialog body's height should:
-         - Match height of window when dialog body's intrinsic height < 50% of window height.
-           In this case, .win-contentdialog-column0or1 will be in column 1 allowing
-           the dialog's body to fill the height of the window.
-         - Size to content otherwise.
-           In this case, .win-contentdialog-column0or1 will be in column 0 preventing
-           the dialog's body from growing.
-       This element works by moving between flexbox columns as the window's height changes.
-     */
-}
-.win-contentdialog.win-contentdialog-verticalalignment {
+.win-clickeater {
+  background-color: transparent;
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top: -5%;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  overflow: hidden;
-  display: none;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  /* center on flex axis (vertically) */
-  -ms-flex-line-pack: center;
-  -webkit-align-content: center;
-  align-content: center;
-  /* maintain horizontal centering when the flexbox has 2 columns */
-}
-.win-contentdialog.win-contentdialog-verticalalignment.win-contentdialog-devicefixedsupported {
-  position: -ms-device-fixed;
-  height: auto;
-  bottom: 0;
-}
-.win-contentdialog.win-contentdialog-verticalalignment.win-contentdialog-visible {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-.win-contentdialog .win-contentdialog-backgroundoverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.win-contentdialog .win-contentdialog-dialog {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -ms-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  z-index: 1;
-  /* Put the dialog's body above the backgroundoverlay */
-  outline-style: solid;
-  outline-width: 1px;
-  box-sizing: border-box;
-  padding: 18px 24px 24px 24px;
-  width: 100%;
-  min-width: 320px;
-  max-width: 456px;
-  min-height: 184px;
-  max-height: 758px;
-  /* Center horizontally */
-  margin-left: auto;
-  margin-right: auto;
-}
-.win-contentdialog .win-contentdialog-column0or1 {
-  -ms-flex: 10000 0 50%;
-  -webkit-flex: 10000 0 50%;
-  flex: 10000 0 50%;
-  width: 0;
-}
-@media (min-height: 640px) {
-  .win-contentdialog .win-contentdialog-dialog {
-    -ms-flex: 0 1 auto;
-    -webkit-flex: 0 1 auto;
-    flex: 0 1 auto;
-  }
-  .win-contentdialog .win-contentdialog-column0or1 {
-    display: none;
-  }
-}
-.win-contentdialog .win-contentdialog-scroller {
-  -ms-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-}
-.win-contentdialog .win-contentdialog-title {
-  -ms-flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  flex: 0 0 auto;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0;
-}
-.win-contentdialog .win-contentdialog-content {
-  -ms-flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  flex: 1 0 auto;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.333;
-}
-.win-contentdialog .win-contentdialog-commands {
-  -ms-flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  flex: 0 0 auto;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  margin-top: 24px;
-  margin-right: -4px;
-  /* Chop off margin on last command */
-}
-.win-contentdialog .win-contentdialog-commandspacer {
-  visibility: hidden;
-}
-.win-contentdialog .win-contentdialog-commands > button {
-  /* Each command should have the same width. Flexbox distributes widths using each
-           item's width and flex-grow as weights. Giving each command a flex-grow of 1
-           and a width of 0 causes each item to have equal weights and thus equal widths.
-         */
-  -ms-flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 0;
-  margin-right: 4px;
-  /* 4px of space between each command */
-  white-space: nowrap;
+  touch-action: none;
+  outline: 1px solid Purple;
+  /*Necessary to block passthrough over webviews*/
+  -ms-high-contrast-adjust: none;
 }
 .win-commandingsurface {
   outline: none;
@@ -3976,19 +3812,6 @@ button.win-command:disabled:active .win-label {
   border-color: #cccccc;
   background-color: #f2f2f2;
 }
-.win-contentdialog-dialog {
-  background-color: #f2f2f2;
-}
-.win-contentdialog-title {
-  color: #000000;
-}
-.win-contentdialog-content {
-  color: #000000;
-}
-.win-contentdialog-backgroundoverlay {
-  background-color: #ffffff;
-  opacity: 0.6;
-}
 .win-commandingsurface .win-commandingsurface-actionarea,
 .win-commandingsurface .win-commandingsurface-actionarea {
   background-color: #e6e6e6;
@@ -4601,19 +4424,6 @@ html.win-hoverable .win-commandingsurface button.win-commandingsurface-overflowb
   border-color: #767676;
   background-color: #2b2b2b;
 }
-.win-ui-dark .win-contentdialog-dialog {
-  background-color: #2b2b2b;
-}
-.win-ui-dark .win-contentdialog-title {
-  color: #ffffff;
-}
-.win-ui-dark .win-contentdialog-content {
-  color: #ffffff;
-}
-.win-ui-dark .win-contentdialog-backgroundoverlay {
-  background-color: #000000;
-  opacity: 0.6;
-}
 .win-ui-dark.win-commandingsurface .win-commandingsurface-actionarea,
 .win-ui-dark .win-commandingsurface .win-commandingsurface-actionarea {
   background-color: #393939;
@@ -5117,19 +4927,6 @@ html.win-hoverable .win-ui-dark .win-commandingsurface button.win-commandingsurf
   button[aria-checked=true].win-command:before {
     border-color: Highlight;
     background-color: Highlight;
-  }
-  .win-contentdialog-dialog {
-    background-color: Window;
-  }
-  .win-contentdialog-title {
-    color: WindowText;
-  }
-  .win-contentdialog-content {
-    color: WindowText;
-  }
-  .win-contentdialog-backgroundoverlay {
-    background-color: Window;
-    opacity: 0.6;
   }
   .win-commandingsurface .win-commandingsurface-actionarea,
   .win-commandingsurface .win-commandingsurface-actionarea {

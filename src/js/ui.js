@@ -24,7 +24,7 @@ define([
     //'WinJS/Controls/NavBar',
     //'WinJS/Controls/Tooltip',
     //'WinJS/Controls/ViewBox',
-    'WinJS/Controls/ContentDialog',
+    //'WinJS/Controls/ContentDialog',
     //'WinJS/Controls/SplitView',
     //'WinJS/Controls/SplitViewPaneToggle',
     //'WinJS/Controls/SplitView/Command',
