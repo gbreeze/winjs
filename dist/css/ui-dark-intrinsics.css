@@ -5,10 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Symbols";
-  src: url(../fonts/Symbols.ttf);
-}
 .win-type-header,
 .win-h1 {
   font-size: 46px;
@@ -287,7 +283,7 @@ textarea,
 button,
 select,
 option {
-  font-family: "Segoe UI", sans-serif, "Segoe MDL2 Assets", "Symbols", "Segoe UI Emoji";
+  font-family: "Segoe UI", sans-serif, "Segoe UI Command", "Symbols", "Segoe UI Emoji";
 }
 input:not([type]),
 input[type=""],

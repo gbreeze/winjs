@@ -357,10 +357,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Symbols";
-  src: url(../fonts/Symbols.ttf);
-}
 .win-type-header,
 .win-h1 {
   font-size: 46px;
@@ -733,7 +729,7 @@ iframe {
 .win-textbox,
 .win-link,
 .win-textarea {
-  font-family: "Segoe UI", sans-serif, "Segoe MDL2 Assets", "Symbols", "Segoe UI Emoji";
+  font-family: "Segoe UI", sans-serif, "Segoe UI Command", "Symbols", "Segoe UI Emoji";
 }
 .win-textbox,
 .win-textarea {
@@ -1406,7 +1402,7 @@ html.win-hoverable .win-itemcontainer.win-itembox.win-selected:hover::before {
   padding: 2px;
   right: 1px;
   top: 1px;
-  font-family: "Segoe MDL2 Assets", "Symbols";
+  font-family: "Segoe UI Command", "Symbols";
   font-size: 14px;
   z-index: 4;
   line-height: 1;
@@ -2180,7 +2176,7 @@ button[aria-checked=true]:disabled:active .win-commandimage {
 Command button labels.
 */
 button.win-command .win-label {
-  font-family: "Segoe UI", sans-serif, "Segoe MDL2 Assets", "Symbols", "Segoe UI Emoji";
+  font-family: "Segoe UI", sans-serif, "Segoe UI Command", "Symbols", "Segoe UI Emoji";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.167;
@@ -2315,7 +2311,7 @@ AppBar
   display: inline-block;
   font-size: 14px;
   text-align: center;
-  font-family: "Segoe MDL2 Assets", "Symbols";
+  font-family: "Segoe UI Command", "Symbols";
 }
 .win-navbar .win-navbar-invokebutton .win-navbar-ellipsis::before {
   content: "\E10C";
@@ -2673,7 +2669,7 @@ Menu commands.
   display: none;
   visibility: hidden;
   font-size: 16px;
-  font-family: "Segoe MDL2 Assets", "Symbols";
+  font-family: "Segoe UI Command", "Symbols";
 }
 .win-menu button.win-command .win-menucommand-liner .win-toggleicon {
   margin-left: 12px;
@@ -3160,7 +3156,7 @@ Settings Pane
 }
 .win-commandingsurface .win-commandingsurface-actionarea .win-commandingsurface-overflowbutton .win-commandingsurface-ellipsis {
   font-size: 16px;
-  font-family: "Segoe MDL2 Assets", "Symbols";
+  font-family: "Segoe UI Command", "Symbols";
 }
 .win-commandingsurface .win-commandingsurface-actionarea .win-commandingsurface-overflowbutton .win-commandingsurface-ellipsis::before {
   content: "\E10C";

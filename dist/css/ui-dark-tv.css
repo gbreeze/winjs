@@ -172,10 +172,6 @@ body:not(.win-visiblebutnotfocused) .win-scrollviewer-scrollmode-text .win-scrol
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Symbols";
-  src: url(../fonts/Symbols.ttf);
-}
 .win-type-header,
 .win-h1 {
   font-size: 46px;
